@@ -45,8 +45,14 @@ BinarySearchTreeMethods.contains = function(value) {
   }
 };
 
-BinarySearchTreeMethods.depthFirstLog = function() {
-
+BinarySearchTreeMethods.depthFirstLog = function(cb) { 
+  cb(this.value);
+  if (this.left) {
+    this.depthFirstLog.call(this.left, cb); 
+  } 
+  if (this.right) {
+    this.depthFirstLog.call(this.right, cb);
+  }
 };
 
 /*
