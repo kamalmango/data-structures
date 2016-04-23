@@ -10,7 +10,7 @@ var BinarySearchTree = function(value) {
 BinarySearchTreeMethods = {};
 
 BinarySearchTreeMethods.insert = function(value, base) {
-  
+  /*
   base = base || this.value;
   if (value < base) {
     if (this.left) {
@@ -25,8 +25,8 @@ BinarySearchTreeMethods.insert = function(value, base) {
       this.right = BinarySearchTree(value);
     }
   }
+  */
   
-  /*
   if (value < this.value) {
     if (this.left) {
       this.insert(value);
@@ -40,7 +40,7 @@ BinarySearchTreeMethods.insert = function(value, base) {
       this.right = BinarySearchTree(value);
     }
   }
-  */
+  
   /*
   if (value < this.value) {
     this.left = BinarySearchTree(value);
