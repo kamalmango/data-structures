@@ -9,7 +9,7 @@ var BinarySearchTree = function(value) {
 
 BinarySearchTreeMethods = {};
 
-BinarySearchTreeMethods.insert = function(value, base) {
+BinarySearchTreeMethods.insert = function(value) {
   if (value < this.value) {
     if (this.left) {
       this.left.insert(value);
@@ -25,8 +25,16 @@ BinarySearchTreeMethods.insert = function(value, base) {
   } 
 };
 
-BinarySearchTreeMethods.contains = function() {
-
+BinarySearchTreeMethods.contains = function(value) {
+  if (this.value === value) {
+    return true;
+  } else {
+    if (value < this.value) {
+      return this.left.contains(value);
+    } else {
+      return this.right.contains(value);
+    }
+  }
 };
 
 BinarySearchTreeMethods.depthFirstLog = function() {
