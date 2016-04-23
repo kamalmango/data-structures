@@ -29,13 +29,13 @@ BinarySearchTreeMethods.insert = function(value, base) {
   
   if (value < this.value) {
     if (this.left) {
-      this.insert(value);
+      this.left.insert(value);
     } else {
       this.left = BinarySearchTree(value);
     }
   } else {
     if (this.right) {
-      this.insert(value);
+      this.right.insert(value);
     } else {
       this.right = BinarySearchTree(value);
     }
