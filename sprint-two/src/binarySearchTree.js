@@ -30,9 +30,17 @@ BinarySearchTreeMethods.contains = function(value) {
     return true;
   } else {
     if (value < this.value) {
-      return this.left.contains(value);
+      if (!this.left) {
+        return false;
+      } else {
+        return this.left.contains(value);
+      }     
     } else {
-      return this.right.contains(value);
+      if (!this.right) {
+        return false;
+      } else {
+        return this.right.contains(value);
+      }   
     }
   }
 };
